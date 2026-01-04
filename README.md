@@ -1,7 +1,7 @@
 # Moje Portfolio
 
 ## 📌 Stručný popis
-Tento web slouží jako osobní portfolio, které prezentuje mé projekty, dovednosti a kontaktní informace.  
+Tento web slouží jako osobní portfolio, které prezentuje můj projekt, dovednosti a kontaktní informace.  
 Cílem webu je ukázat mé schopnosti v HTML, CSS a JavaScriptu a poskytnout jednoduchý a přehledný způsob, jak se o mně dozvědět.
 
 ---
@@ -22,9 +22,7 @@ Web je dostupný online:
 
 ---
 
-## ⭐ Prvky, na které jsem nejvíce hrdý
-- Responzivní design, který funguje na mobilu i počítači  
+## ⭐ Prvky, na které jsem nejvíce hrdý 
 - Přehledná a čistá struktura kódu  
-- Interaktivní prvky v JavaScriptu (např. menu a efekty)  
-- Použití vlastního grafického designu  
+- Interaktivní prvky v JavaScriptu   
 - Jednoduché a intuitivní uživatelské rozhraní
