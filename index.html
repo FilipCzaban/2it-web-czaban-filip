@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filip Czaban | Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PARTICLES CANVAS -->
+    <canvas id="particles"></canvas>
+
+    <!-- BACKGROUND SCENE -->
+    <div class="background-scene">
+        <!-- Glass Blobs -->
+        <div class="shape-blob blob-1" data-speed="0.05"></div>
+        <div class="shape-blob blob-2" data-speed="0.08"></div>
+        <div class="shape-blob blob-3" data-speed="0.03"></div>
+        <div class="shape-blob blob-4" data-speed="0.06"></div>
+        <div class="shape-blob blob-5" data-speed="0.04"></div>
+
+        <!-- Geometric Shapes -->
+        <div class="shape-geo geo-1" data-speed="0.02"></div>
+        <div class="shape-geo geo-2" data-speed="0.04"></div>
+        <div class="shape-geo geo-3" data-speed="0.06"></div>
+        <div class="shape-geo geo-4" data-speed="0.05"></div>
+        <div class="shape-geo geo-5" data-speed="0.07"></div>
+        <div class="shape-geo geo-6" data-speed="0.03"></div>
+        <div class="shape-geo geo-7" data-speed="0.06"></div>
+    </div>
+
+    <!-- SPOTLIGHT OVERLAY -->
+    <div id="spotlight"></div>
+
+    <div class="ambient-light"></div>
+
+
+    <div class="controls">
+        <div class="language-dropdown">
+            <button class="lang-btn" onclick="toggleLanguageMenu()">
+                <span id="current-lang">CS</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
+            </button>
+            <div class="lang-menu" id="lang-menu">
+                <div class="lang-option" onclick="window.selectLanguage('cs')">CS</div>
+                <div class="lang-option" onclick="window.selectLanguage('en')">EN</div>
+                <div class="lang-option" onclick="window.selectLanguage('de')">DE</div>
+                <div class="lang-option" onclick="window.selectLanguage('fr')">FR</div>
+                <div class="lang-option" onclick="window.selectLanguage('ru')">RU</div>
+            </div>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path
+                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                </path>
+            </svg>
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- LEFT: IDENTITY -->
+        <div class="col-left">
+            <div class="top-label">PORTFOLIO 2026</div>
+            <h1>Filip<br>Czaban</h1>
+            <div class="subtitle" data-i18n="subtitle">
+                Frontend vývojář zaměřený na<br>moderní UI, animace a interaktivní weby.
+            </div>
+            <p class="bio" data-i18n="bio">
+                Vytvářím webové aplikace, které nejsou jen funkční, ale i vizuálně působivé.
+            </p>
+            <div class="links">
+                <a href="https://github.com/FilipCzaban" target="_blank" class="btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+        <!-- RIGHT: INFO TABLE -->
+        <div class="col-right">
+            <div class="info-card">
+                <table class="info-table">
+                    <tr>
+                        <td class="label" data-i18n="label_tech">Technologie</td>
+                        <td class="value" data-i18n="value_tech">JavaScript, HTML, CSS</td>
+                    </tr>
+                    <tr>
+                        <td class="label" data-i18n="label_focus">Zaměření</td>
+                        <td class="value" data-i18n="value_focus">Moderní UI, Animace, Interaktivita</td>
+                    </tr>
+                    <tr>
+                        <td class="label" data-i18n="label_type">Typ Projektu</td>
+                        <td class="value" data-i18n="value_type">Webové aplikace, Prototypy</td>
+                    </tr>
+                    <tr>
+                        <td class="label" data-i18n="label_workflow">Workflow</td>
+                        <td class="value" data-i18n="value_workflow">Git, Komponentový přístup</td>
+                    </tr>
+                    <tr>
+                        <td class="label" data-i18n="label_hobby">Hobby</td>
+                        <td class="value" data-i18n="value_hobby">Výroba pyrotechniky, Jízda na motorce</td>
+                    </tr>
+                    <tr>
+                        <td class="label" data-i18n="label_project">Projekt</td>
+                        <td class="value">
+                            <a href="./neobank/index.html" target="_blank" class="mini-mockup-wrapper"
+                                style="text-decoration: none; color: inherit;">
+                                <div class="mockup">
+                                    <div class="mockup-container">
+                                        <div class="mock-sidebar">
+                                            <div class="mock-icon active"></div>
+                                            <div class="mock-icon"></div>
+                                            <div class="mock-icon"></div>
+                                        </div>
+                                        <div class="mock-content">
+                                            <div class="mock-header">
+                                                <div class="mock-title" data-i18n="mockup_title">Dashboard</div>
+                                                <div class="mock-user"></div>
+                                            </div>
+                                            <div class="credit-card">
+                                                <div class="card-chip"></div>
+                                                <div class="card-number">**** **** **** 4242</div>
+                                                <div class="card-details">
+                                                    <div class="card-holder">Filip Czaban</div>
+                                                    <div class="card-brand">VISA</div>
+                                                </div>
+                                            </div>
+                                            <div class="mock-row">
+                                                <div class="mock-stat">
+                                                    <div class="mock-bar"></div>
+                                                </div>
+                                                <div class="mock-stat">
+                                                    <div class="mock-bar" style="width: 40%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
