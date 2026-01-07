@@ -13,7 +13,7 @@ One-Page osobní portfolio, které prezentuje můj projekt, dovednosti a kontakt
 ---
 
 ## ▶️ Návod na spuštění
-Web je **plně funkční po otevření souboru `index.html`** v internetovém prohlížeči.
+Web je **plně funkční po otevření souboru `index.html`** v internetovém prohlížeči nebo níže dostupný na github-pages.
 
 ### Nasazený web
 Web je dostupný online:  
